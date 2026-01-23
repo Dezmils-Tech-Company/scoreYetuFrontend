@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "Inter-School Football Championship Finals",
+    "type": "Featured",
+    "date": "Sat, Jun 15 • 3:00 PM",
+    "venue": "Kisumu High School Grounds",
+    "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018",
+    "description": "The championship finals of the Nyanza Region Inter-School Football League. Top teams from Kisumu, Kericho, Kisii, and Nakuru compete for the regional title. Live commentary available in English and Swahili.",
+    "aspect": "landscape"
+  },
+  {
+    "id": 2,
+    "title": "Amadi County Cup Tournament",
+    "type": "Ongoing",
+    "date": "Every Saturday - Through March",
+    "venue": "Maseno School Grounds",
+    "image": "https://res.cloudinary.com/daecietav/image/upload/v1767876945/WhatsApp_Image_2026-01-08_at_15.26.26_vwqk1z.jpg",
+    "description": "Intense tournaments featuring the best secondary schools across Nyanza. Coached by certified professionals with focus on skill development and competitive excellence.",
+    "aspect": "portrait"
+  },
+  {
+    "id": 4,
+    "title": "2024 Nyanza Football League Winners Ceremony",
+    "type": "Past Glory",
+    "date": "Dec 10, 2024",
+    "venue": "Nakuru High School",
+    "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e",
+    "description": "Memorable finals that crowned champions of the Nyanza Region. Record attendance of over 5000 spectators celebrated this historic tournament with prize awards and recognition ceremonies.",
+    "aspect": "landscape"
+  },
+  {
+    "id": 5,
+    "title": "Kenya Inter-County Games Selection Trials",
+    "type": "Upcoming",
+    "date": "Mar 8-10, 2025 • 9 AM",
+    "venue": "Nakuru Sports Complex",
+    "image": "https://res.cloudinary.com/daecietav/image/upload/v1767866635/WhatsApp_Image_2026-01-08_at_12.36.17_2_yoes2k.jpg",
+    "description": "Selection trials for Kenya Inter-County Games. National and county sports commissioners will evaluate top athletes from all Nyanza schools. Showcase your talent to reach national level.",
+    "aspect": "portrait"
+  },
+ 
+  {
+    "id": 8,
+    "title": "Siaya Local Talent Search",
+    "type": "Upcoming",
+    "date": "May 20-25, 2026",
+    "venue": "St Mary's Yala Grounds",
+    "image": "https://res.cloudinary.com/daecietav/image/upload/v1767865240/WhatsApp_Image_2026-01-08_at_12.36.17_1_nhfwbe.jpg",
+    "description": "Inter-school netball competition uniting teams from all Nyanza secondary schools. Build networks, showcase talent, and compete for regional excellence with top coaches observing.",
+    "aspect": "landscape"
+  }
+  
+]
