@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Inter-School Football Championship Finals",
+    "type": "Featured",
+    "date": "Sat, Jun 15 • 3:00 PM",
+    "venue": "Kisumu High School Grounds",
+    "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018",
+    "description": "The championship finals of the Nyanza Region Inter-School Football League. Top teams from Kisumu, Kericho, Kisii, and Nakuru compete for the regional title. Live commentary available in English and Swahili.",
+    "aspect": "landscape"
+  },
+  {
+    "id": 2,
+    "title": "Nyanza Rugby Championship 2025",
+    "type": "Ongoing",
+    "date": "Every Saturday - Through August",
+    "venue": "Maseno School Grounds",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+    "description": "Intense rugby tournaments featuring the best secondary schools across Nyanza. Coached by certified professionals with focus on skill development and competitive excellence.",
+    "aspect": "portrait"
+  },
+  {
+    "id": 4,
+    "title": "2024 Nyanza Football League Winners Ceremony",
+    "type": "Past Glory",
+    "date": "Dec 10, 2024",
+    "venue": "Nakuru High School",
+    "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e",
+    "description": "Memorable finals that crowned champions of the Nyanza Region. Record attendance of over 5000 spectators celebrated this historic tournament with prize awards and recognition ceremonies.",
+    "aspect": "landscape"
+  },
+  {
+    "id": 5,
+    "title": "Kenya Inter-County Games Selection Trials",
+    "type": "Upcoming",
+    "date": "Mar 8-10, 2025 • 9 AM",
+    "venue": "Nakuru Sports Complex",
+    "image": "https://images.unsplash.com/photo-1546519638-68e109498ffc",
+    "description": "Selection trials for Kenya Inter-County Games. National and county sports commissioners will evaluate top athletes from all Nyanza schools. Showcase your talent to reach national level.",
+    "aspect": "portrait"
+  },
+  {
+    "id": 7,
+    "title": "Nyanza Girls Hockey Championship",
+    "type": "Featured",
+    "date": "Apr 5-7, 2025",
+    "venue": "Kericho High School",
+    "image": "https://images.unsplash.com/photo-1571019613914-85f342c56f74",
+    "description": "Premier hockey championship celebrating female athletes across the Nyanza Region. Teams compete in A and B divisions with professional umpires and international standard rules.",
+    "aspect": "portrait"
+  },
+  {
+    "id": 8,
+    "title": "Nyanza Inter-School Netball Championship",
+    "type": "Upcoming",
+    "date": "May 20-25, 2025",
+    "venue": "Nyanza Girls High School",
+    "image": "https://images.unsplash.com/photo-1549060279-7e168fcee0c2",
+    "description": "Inter-school netball competition uniting teams from all Nyanza secondary schools. Build networks, showcase talent, and compete for regional excellence with top coaches observing.",
+    "aspect": "landscape"
+  },
+  {
+    "id": 9,
+    "title": "Nyanza Schools Athletics Development Series",
+    "type": "Ongoing",
+    "date": "Every Wednesday & Saturday • 6:00 AM",
+    "venue": "Kisumu Athletic Stadium",
+    "image": "https://images.unsplash.com/photo-1552674605-5defe6aa44bb",
+    "description": "Weekly athletics trials for track and field athletes from all Nyanza schools. Professional coaching for middle and long-distance running events with performance tracking.",
+    "aspect": "square"
+  },
+  {
+    "id": 10,
+    "title": "Nyanza Region Sports Excellence Awards",
+    "type": "Special",
+    "date": "Jul 25, 2025",
+    "venue": "Nakuru County Hall",
+    "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf",
+    "description": "Annual celebration honoring outstanding young athletes and coaches across Nyanza. Prize awards, scholarships, and national recognition for the year's best performers.",
+    "aspect": "landscape"
+  },
+  {
+    "id": 11,
+    "title": "Nyanza Tennis Development League",
+    "type": "Upcoming",
+    "date": "Jun 1-30, 2025",
+    "venue": "Nakuru High School Courts",
+    "image": "https://images.unsplash.com/photo-1438029071396-1e831a7fa6d5",
+    "description": "Monthly tennis tournaments for talent development. Open to all secondary schools across Nyanza with professional coaching and talent identification for national competitions.",
+    "aspect": "portrait"
+  }
+]

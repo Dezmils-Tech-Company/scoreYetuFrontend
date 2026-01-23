@@ -1,0 +1,87 @@
+[
+  {
+    "city": "Kisumu",
+    "locations": [
+      {
+        "branch": "Kisumu High School",
+        "address": "Nairobi Road, Kisumu, Kenya",
+        "map": "https://maps.google.com/?q=-0.1019,34.7680"
+      },
+      {
+        "branch": "Nyanza Girls High School",
+        "address": "Kenyatta Avenue, Kisumu, Kenya",
+        "map": "https://maps.google.com/?q=-0.0980,34.7620"
+      },
+      {
+        "branch": "Maseno School",
+        "address": "Kisumu-Nakuru Road, Maseno, Kenya",
+        "map": "https://maps.google.com/?q=-0.0250,34.6650"
+      },
+      {
+        "branch": "Moi Girls High School Kisumu",
+        "address": "Jomo Kenyatta Avenue, Kisumu, Kenya",
+        "map": "https://maps.google.com/?q=-0.1080,34.7550"
+      }
+    ]
+  },
+  {
+    "city": "Kericho",
+    "locations": [
+      {
+        "branch": "Kericho High School",
+        "address": "Main Street, Kericho, Kenya",
+        "map": "https://maps.google.com/?q=-0.3667,35.2833"
+      },
+      {
+        "branch": "Chepseon High School",
+        "address": "Chepseon Region, Kericho District, Kenya",
+        "map": "https://maps.google.com/?q=-0.4500,35.2500"
+      },
+      {
+        "branch": "Moi Girls High School Kericho",
+        "address": "Mombasa Road, Kericho, Kenya",
+        "map": "https://maps.google.com/?q=-0.3750,35.2800"
+      }
+    ]
+  },
+  {
+    "city": "Nakuru",
+    "locations": [
+      {
+        "branch": "Nakuru High School",
+        "address": "Club Road, Nakuru, Kenya",
+        "map": "https://maps.google.com/?q=-0.2833,36.0667"
+      },
+      {
+        "branch": "Rift Valley Institute",
+        "address": "Nairobi Road, Nakuru, Kenya",
+        "map": "https://maps.google.com/?q=-0.2900,36.0500"
+      },
+      {
+        "branch": "Nairobi School Nakuru Campus",
+        "address": "Westlands Road, Nakuru, Kenya",
+        "map": "https://maps.google.com/?q=-0.2750,36.0650"
+      }
+    ]
+  },
+  {
+    "city": "Kisii",
+    "locations": [
+      {
+        "branch": "Kisii High School",
+        "address": "Hospital Road, Kisii, Kenya",
+        "map": "https://maps.google.com/?q=-0.6808,34.7727"
+      },
+      {
+        "branch": "Moi Girls High School Kisii",
+        "address": "Nyamache Road, Kisii, Kenya",
+        "map": "https://maps.google.com/?q=-0.6700,34.7800"
+      },
+      {
+        "branch": "Kisii School",
+        "address": "Tabaka Road, Kisii, Kenya",
+        "map": "https://maps.google.com/?q=-0.6850,34.7600"
+      }
+    ]
+  }
+]
