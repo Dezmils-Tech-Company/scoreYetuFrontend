@@ -18,7 +18,7 @@ const SchoolCard = ({ school }) => (
 
     {/* View button navigates to profile */}
     <Link
-      to={`/schools/${school.id}`}
+      to={`/schools/${school._id}`}
       className="px-4 py-2 text-sm bg-green-600 text-white rounded-md hover:bg-green-700"
     >
       View
