@@ -37,7 +37,7 @@ const RecentResultsCarousel = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/events");
+        const res = await fetch("https://scoreyetu-backend.onrender.com/api/events");
         const data = await res.json();
         // Only show recent/completed events
         setRecentResults(data.filter(ev => ev.status.toLowerCase() === "completed"));
