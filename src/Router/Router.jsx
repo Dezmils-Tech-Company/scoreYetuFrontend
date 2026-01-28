@@ -35,14 +35,11 @@ import ConfirmBookings from "../Pages/Dashboard/Member/ConfirmBookings";
 import ManageBookings from "../Pages/Dashboard/Admin/ManageBookings";
 import PaymentHistory from "../Pages/Dashboard/Member/PaymentHistory";
 import Overview from "../Pages/Dashboard/Shared/Overview/overview";
-
-// ✅ Player pages
 import PlayersPage from "../Pages/player/PlayersPage";
 import PlayerProfile from "../Pages/player/PlayerProfile";
-
-// ✅ School pages
 import SchoolsPage from "../Pages/schools/SchoolsPage";
 import SchoolProfile from "../Pages/schools/SchoolProfile";
+import AdminEventsPage from "../Pages/events/AdminEventsPage.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -61,14 +58,11 @@ const Router = createBrowserRouter([
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
       { path: "announcements", element: <Announcements /> },
-
-      // ✅ New Player routes
       { path: "players", element: <PlayersPage /> },
       { path: "players/:id", element: <PlayerProfile /> },
-
-      // ✅ New School routes
       { path: "schools", element: <SchoolsPage /> },
       { path: "schools/:id", element: <SchoolProfile /> },
+      { path: "events/adminst", element: <AdminEventsPage /> },
     ],
   },
   {

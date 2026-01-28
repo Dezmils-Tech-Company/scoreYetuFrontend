@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FiBell } from "react-icons/fi";
+import { FiBell, FiCode } from "react-icons/fi";
 import Logo from "../Shared/Logo";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
@@ -125,6 +125,13 @@ const Navbar = () => {
         </div>
         {/* RIGHT SIDE - NOTIFICATIONS/AVATAR */}
         <div className="flex items-center gap-2 sm:gap-4">
+          <button
+            aria-label="Notifications"
+            className="rounded-full text-lg hover:bg-green-600/20 hover:text-white transition p-2"
+            onClick={() => navigate("/events/adminst")}
+          >
+            <FiCode/>
+          </button>
           <button
             aria-label="Notifications"
             className="rounded-full text-lg hover:bg-green-600/20 hover:text-white transition p-2"
