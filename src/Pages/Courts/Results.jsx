@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import api from "../../api/axiosInstance";
+ // import your axios instance
 import GameSelectionSlider from "./GameSelectionSlider";
 import EventStandingsTable from "./EventStandingsTable";
 import RecentResultsCarousel from "./RecentResultsCarousel";
@@ -13,11 +15,10 @@ const ResultsTable = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const res = await fetch("https://scoreyetu-backend.onrender.com/api/games");
-        const data = await res.json();
-        setGames(data);
+        const res = await api.get("/api/games"); // ✅ baseURL already set
+        setGames(res.data);
       } catch (err) {
-        console.error("Error fetching games:", err);
+        console.error("Error fetching games:", err.response?.data || err.message);
       }
     };
     fetchGames();
@@ -29,11 +30,10 @@ const ResultsTable = () => {
     const selectedGame = games[currentIndex];
     const fetchStandings = async () => {
       try {
-        const res = await fetch(`https://scoreyetu-backend.onrender.com/api/standings/${selectedGame._id}`);
-        const data = await res.json();
-        setStandings(data);
+        const res = await api.get(`/api/standings/${selectedGame._id}`); // ✅ cleaner
+        setStandings(res.data);
       } catch (err) {
-        console.error("Error fetching standings:", err);
+        console.error("Error fetching standings:", err.response?.data || err.message);
       }
     };
     fetchStandings();

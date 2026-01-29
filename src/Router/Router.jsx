@@ -39,7 +39,7 @@ import PlayersPage from "../Pages/player/PlayersPage";
 import PlayerProfile from "../Pages/player/PlayerProfile";
 import SchoolsPage from "../Pages/schools/SchoolsPage";
 import SchoolProfile from "../Pages/schools/SchoolProfile";
-import AdminEventsPage from "../Pages/events/AdminEventsPage.jsx";
+import AdminEventsPage from "../Pages/Events/AdminEventsPage.jsx";
 
 const Router = createBrowserRouter([
   {
