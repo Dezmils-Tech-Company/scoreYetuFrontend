@@ -1,38 +1,59 @@
 import React, { useEffect, useState } from "react";
 import GameSelectionSlider from "./GameSelectionSlider";
 import EventStandingsTable from "./EventStandingsTable";
-import RecentResultsCarousel from "./RecentResultsCarousel"; 
+import RecentResultsCarousel from "./RecentResultsCarousel";
+import KenyaSpinner from "../../Components/Shared/Spinner";
 
 const ResultsTable = () => {
-  const [events, setEvents] = useState([]);
+  const [games, setGames] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [standings, setStandings] = useState([]);
 
+  // Fetch games
   useEffect(() => {
-    const fetchEvents = async () => {
+    const fetchGames = async () => {
       try {
-        const res = await fetch("https://scoreyetu-backend.onrender.com/api/events");
+        const res = await fetch("https://scoreyetu-backend.onrender.com/api/games");
         const data = await res.json();
-        setEvents(data);
+        setGames(data);
       } catch (err) {
-        console.error("Error fetching events:", err);
+        console.error("Error fetching games:", err);
       }
     };
-    fetchEvents();
+    fetchGames();
   }, []);
 
-  if (!events.length) return <p className="text-center mt-10">Loading events...</p>;
+  // Fetch standings for selected game
+  useEffect(() => {
+    if (!games.length) return;
+    const selectedGame = games[currentIndex];
+    const fetchStandings = async () => {
+      try {
+        const res = await fetch(`https://scoreyetu-backend.onrender.com/api/standings/${selectedGame._id}`);
+        const data = await res.json();
+        setStandings(data);
+      } catch (err) {
+        console.error("Error fetching standings:", err);
+      }
+    };
+    fetchStandings();
+  }, [games, currentIndex]);
+
+  if (!games.length) return <KenyaSpinner text="Loading Results...." />;
 
   return (
     <section className="bg-white py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <RecentResultsCarousel />
         <GameSelectionSlider
-          events={events}
+          games={games}
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
-          getSportIcon={(sport) => sport}
         />
-        <EventStandingsTable event={events[currentIndex]} />
+        <EventStandingsTable
+          gameName={games[currentIndex]?.name}
+          standings={standings}
+        />
       </div>
     </section>
   );

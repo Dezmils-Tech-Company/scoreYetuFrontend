@@ -37,9 +37,9 @@ const RecentResultsCarousel = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("https://scoreyetu-backend.onrender.com/api/events");
+        const res = await fetch("https://scoreyetu-backend.onrender.com/api/matches/latest");
         const data = await res.json();
-        // Only show recent/completed events
+        // Only show completed events
         setRecentResults(data.filter(ev => ev.status.toLowerCase() === "completed"));
       } catch (err) {
         console.error("Error fetching events:", err);
@@ -90,7 +90,7 @@ const RecentResultsCarousel = () => {
                   {/* Sport Badge & Status */}
                   <div className="flex items-center justify-between mb-8">
                     <span className="text-xs font-bold text-red-600 uppercase tracking-widest bg-cyan-400/10 px-3 py-1 rounded-full flex items-center">
-                      {getSportIcon(event.sport)} {event.sport}
+                      {getSportIcon(event.game.name)} {event.game.name}
                     </span>
                     <span className={`${getStatusColor(event.status)} px-2 py-1 rounded-full text-xs font-semibold uppercase`}>
                       {event.status}
@@ -103,10 +103,10 @@ const RecentResultsCarousel = () => {
                       {/* Home Team */}
                       <div className="flex-1 text-center">
                         <div className="text-sm font-semibold text-black mb-3 line-clamp-2">
-                          {event.results?.[0]?.school?.name}
+                          {event.homeSchool?.name}
                         </div>
                         <div className="text-5xl font-black text-red-600 drop-shadow-lg">
-                          {event.results?.[0]?.gf}
+                          {event.homeScore}
                         </div>
                       </div>
 
@@ -119,10 +119,10 @@ const RecentResultsCarousel = () => {
                       {/* Away Team */}
                       <div className="flex-1 text-center">
                         <div className="text-sm font-semibold text-black mb-3 line-clamp-2">
-                          {event.results?.[1]?.school?.name}
+                          {event.awaySchool?.name}
                         </div>
                         <div className="text-5xl font-black text-red-600 drop-shadow-lg">
-                          {event.results?.[1]?.gf}
+                          {event.awayScore}
                         </div>
                       </div>
                     </div>

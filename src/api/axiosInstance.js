@@ -1,19 +1,11 @@
+// src/utils/axios.js
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://elite-arena-server-side.vercel.app/",
-});
-
-// Request interceptor to add JWT token automatically
-api.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem("accessToken");
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
+  baseURL: "https://scoreyetu-backend.onrender.com", // or your deployed backend URL
+  headers: {
+    "Content-Type": "application/json",
   },
-  (error) => Promise.reject(error)
-);
+});
 
 export default api;

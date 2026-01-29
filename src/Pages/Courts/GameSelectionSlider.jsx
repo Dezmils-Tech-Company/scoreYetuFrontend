@@ -1,18 +1,20 @@
 import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const GameSelectionSlider = ({ events, currentIndex, setCurrentIndex}) => (
+const GameSelectionSlider = ({ games, currentIndex, setCurrentIndex }) => (
   <div className="flex items-center gap-4 mb-6 flex-wrap">
+    {/* Prev Button */}
     <button
-      onClick={() => setCurrentIndex((prev) => (prev - 1 + events.length) % events.length)}
+      onClick={() => setCurrentIndex((prev) => (prev - 1 + games.length) % games.length)}
       className="hidden sm:flex px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold rounded-lg transition items-center gap-2"
     >
       <FaArrowLeft className="w-4 h-4" />
       <span className="hidden sm:inline">Prev</span>
     </button>
 
+    {/* Slider Buttons */}
     <div className="flex gap-2 overflow-x-auto pb-2 flex-1">
-      {events.map((game, idx) => (
+      {games.map((game, idx) => (
         <button
           key={game._id}
           onClick={() => setCurrentIndex(idx)}
@@ -22,14 +24,14 @@ const GameSelectionSlider = ({ events, currentIndex, setCurrentIndex}) => (
               : "bg-gray-800 text-gray-300 hover:bg-gray-700"
           }`}
         >
-          
-          {game.sport}
+          {game.name} {/* ✅ use name from backend */}
         </button>
       ))}
     </div>
 
+    {/* Next Button */}
     <button
-      onClick={() => setCurrentIndex((prev) => (prev + 1) % events.length)}
+      onClick={() => setCurrentIndex((prev) => (prev + 1) % games.length)}
       className="hidden sm:flex px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold rounded-lg transition items-center gap-2"
     >
       <span className="hidden sm:inline">Next</span>
