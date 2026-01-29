@@ -142,7 +142,8 @@ const Register = () => {
             email: formData.email,
             image: uploadedImageURL || null,
           };
-          await api.put("/users", userPayload);
+          await api.put("/api/users", userPayload);
+
         } catch (err) {
           console.error("Backend user save error:", err);
           Swal.fire({
@@ -190,25 +191,48 @@ const Register = () => {
   };
 
   const handleGoogleLogin = () => {
-    googleSignIn()
-      .then((result) => {
+  googleSignIn()
+    .then(async (result) => {
+      const googleUser = result.user;
+
+      // Build payload for backend
+      const userPayload = {
+        name: googleUser.displayName,
+        email: googleUser.email,
+        image: googleUser.photoURL || null,
+      };
+
+      try {
+        // IMPORTANT: match your backend route
+        await api.put("/api/users", userPayload);
+
         Swal.fire({
           icon: "success",
           title: "Google Registration Successful",
-          text: `Welcome, ${result.user.displayName || "User"}!`,
+          text: `Welcome, ${googleUser.displayName || "User"}!`,
           timer: 1500,
           showConfirmButton: false,
         });
+
         navigate("/");
-      })
-      .catch((error) => {
+      } catch (err) {
+        console.error("Backend user save error:", err);
         Swal.fire({
           icon: "error",
-          title: "Google Login Failed",
-          text: error.message,
+          title: "Backend User Save Failed",
+          text: err.message || "Please try again later.",
         });
+      }
+    })
+    .catch((error) => {
+      Swal.fire({
+        icon: "error",
+        title: "Google Login Failed",
+        text: error.message,
       });
-  };
+    });
+};
+
 
   return (
     <motion.div
