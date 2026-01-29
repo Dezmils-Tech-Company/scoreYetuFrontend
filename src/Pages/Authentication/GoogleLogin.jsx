@@ -26,7 +26,7 @@ const GoogleLogin = () => {
       };
 
       // Send PUT request to backend /users endpoint
-      const res = await api.put("/users", userData);
+      const res = await api.put("/api/users", userData);
 
       if (res.status === 200 || res.status === 201) {
         Swal.fire({

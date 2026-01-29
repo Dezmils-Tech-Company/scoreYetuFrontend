@@ -204,7 +204,7 @@ const Register = () => {
 
       try {
         // IMPORTANT: match your backend route
-        await api.put("/api/users", userPayload);
+       await api.put("/api/users", userPayload);
 
         Swal.fire({
           icon: "success",
