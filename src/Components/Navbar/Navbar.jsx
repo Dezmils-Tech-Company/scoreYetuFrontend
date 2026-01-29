@@ -5,6 +5,7 @@ import Logo from "../Shared/Logo";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import api from "../../api/axiosInstance";
+import { FaLongArrowAltDown, FaSignInAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -127,10 +128,10 @@ const Navbar = () => {
         <div className="flex items-center gap-2 sm:gap-4">
           <button
             aria-label="Notifications"
-            className="rounded-full text-lg hover:bg-green-600/20 hover:text-white transition p-2"
-            onClick={() => navigate("/events/adminst")}
+            className="flex gap-2 rounded-full text-l hover:bg-green-600/20 hover:text-white transition p-2"
+            onClick={() => navigate("/login")}
           >
-            <FiCode/>
+           Sign in
           </button>
           <button
             aria-label="Notifications"
