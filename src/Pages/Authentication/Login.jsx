@@ -112,56 +112,56 @@ const Login = () => {
 
   return (
     <motion.div
-      className="min-h-screen pt-20 flex items-center justify-center bg-gray-950 p-4 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-red-500/10 p-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <motion.div
-        className="z-10 w-full max-w-3xl"
+        className="w-full max-w-md bg-green-900/10 rounded-xl shadow-lg "
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        <div className="bg-gray-900/90 backdrop-blur-lg border border-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="bg-gray-300 backdrop-blur-lg border border-green-500/30 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-6 sm:p-8 md:p-10">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-white mb-1">
+              <h2 className="text-3xl font-bold text-red-600">
                 Welcome Back
               </h2>
-              <p className="text-gray-400 text-sm">
-                Sign in to continue to Elite Arena
+              <p className="text-green-600 text-sm">
+                Sign in to continue to Score Yetu
               </p>
             </div>
 
             <form
               onSubmit={handleSubmit}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              className="space-y-6"
             >
               {/* Email */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">
+                <label className="block text-sm text-red-600 mb-1">
                   Email
                 </label>
                 <input
                   ref={emailRef}
                   type="email"
                   placeholder="your@email.com"
-                  className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
+                  className="w-full bg-gray-400 border border-green-600 rounded-lg px-4 py-2 text-black placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
               </div>
 
               {/* Password */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">
+                <label className="block text-sm text-red-600 mb-1">
                   Password
                 </label>
                 <input
                   ref={passwordRef}
                   type="password"
                   placeholder="••••••••"
-                  className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
+                  className="w-full bg-gray-400 border border-green-600 rounded-lg px-4 py-2 text-black placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
               </div>
@@ -170,11 +170,11 @@ const Login = () => {
               <div className="md:col-span-2 flex justify-center">
                 <motion.button
                   type="submit"
-                  className={`w-full max-w-md bg-blue-600 text-white font-semibold py-3 rounded-lg shadow-lg transition duration-300
+                  className={`w-full bg-red-600 text-white font-semibold py-3 rounded-lg shadow-md transition duration-300
                     ${
                       loading
-                        ? "cursor-not-allowed opacity-70"
-                        : "cursor-pointer hover:bg-blue-700"
+                        ? "opacity-70 cursor-not-allowed"
+                        : "hover:bg-red-700"
                     }`}
                   whileHover={loading ? {} : { scale: 1.02 }}
                   whileTap={loading ? {} : { scale: 0.98 }}
@@ -209,26 +209,21 @@ const Login = () => {
             </form>
 
             {/* OR Divider */}
-            <div className="relative my-6">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-700" />
-              </div>
-              <div className="relative flex justify-center">
-                <span className="bg-gray-900 px-3 text-sm text-gray-400">
-                  OR
-                </span>
-              </div>
-            </div>
+             <div className="my-6 flex items-center">
+        <div className="flex-grow border-t border-green-600"></div>
+        <span className="px-3 text-sm text-gray-800">OR</span>
+        <div className="flex-grow border-t border-green-600"></div>
+      </div>
 
             {/* Google Login */}
             <GoogleLogin onClick={handleGoogleLogin} />
 
             {/* Sign Up Link */}
-            <p className="mt-6 text-center text-sm text-gray-400">
+            <p className="mt-6 text-center text-sm text-gray-800">
               Don't have an account?{" "}
               <Link
                 to="/register"
-                className="text-blue-400 hover:text-blue-300 font-medium"
+                className="text-green-400 hover:text-red-500 font-medium"
               >
                 Register
               </Link>

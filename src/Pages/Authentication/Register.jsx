@@ -236,7 +236,7 @@ const Register = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex items-center justify-center bg-gray-950 pt-24 p-4 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-white pt-24 p-4 relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -247,14 +247,14 @@ const Register = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        <div className="bg-gray-900/90 backdrop-blur-lg border border-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="bg-gray-300 backdrop-blur-lg border border-green-300 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-6 sm:p-8 md:p-10">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-white mb-1">
+              <h2 className="text-3xl font-bold text-red-600 mb-1">
                 Create Account
               </h2>
-              <p className="text-gray-400 text-sm">
-                Join our premium community
+              <p className="text-green-500 text-sm text shadow-2xl">
+                Join Score Yetu premium community
               </p>
             </div>
 
@@ -268,7 +268,7 @@ const Register = () => {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-gray-500">
+                    <div className="w-full h-full flex items-center justify-center text-green-500">
                       <svg
                         className="w-8 h-8"
                         fill="none"
@@ -313,7 +313,7 @@ const Register = () => {
                   </svg>
                 </label>
               </div>
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-black">
                 Upload profile picture (optional)
               </p>
             </div>
@@ -323,7 +323,7 @@ const Register = () => {
               className="grid grid-cols-1 md:grid-cols-2 gap-6"
             >
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">
+                <label className="block text-sm text-red-600 mb-1">
                   Full Name
                 </label>
                 <input
@@ -332,13 +332,13 @@ const Register = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="John Doe"
-                  className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
+                  className="w-full bg-green-600/10 border border-green-600 rounded-lg px-4 py-2 text-black placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-green-500"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">
+                <label className="block text-sm text-red-600 mb-1">
                   Email
                 </label>
                 <input
@@ -347,13 +347,13 @@ const Register = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
-                  className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
+                  className="w-full bg-green-600/10 border border-green-600 rounded-lg px-4 py-2 text-black placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-green-500"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">
+                <label className="block text-sm text-red-600 mb-1">
                   Password
                 </label>
                 <input
@@ -362,7 +362,7 @@ const Register = () => {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="••••••••"
-                  className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
+                  className="w-full bg-green-600/10 border border-green-600 rounded-lg px-4 py-2 text-black placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-green-500"
                   required
                 />
                 {passwordError && formData.password && (
@@ -371,7 +371,7 @@ const Register = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">
+                <label className="block text-sm text-red-600 mb-1">
                   Confirm Password
                 </label>
                 <input
@@ -380,7 +380,7 @@ const Register = () => {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="••••••••"
-                  className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none"
+                  className="w-full bg-green-600/10 border border-green-600 rounded-lg px-4 py-2 text-black placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-green-500"
                   required
                 />
                 {formData.confirmPassword &&
@@ -394,11 +394,11 @@ const Register = () => {
               <div className="md:col-span-2 flex justify-center">
                 <motion.button
                   type="submit"
-                  className={`w-full max-w-md bg-blue-600 text-white font-semibold py-3 rounded-lg shadow-lg transition duration-300
+                  className={`w-full bg-red-600 text-white font-semibold py-3 rounded-lg shadow-md transition duration-300
                   ${
                     loading
                       ? "cursor-not-allowed opacity-70"
-                      : "cursor-pointer hover:bg-blue-700"
+                      : "cursor-pointer hover:bg-red-700"
                   }`}
                   whileHover={loading ? {} : { scale: 1.02 }}
                   whileTap={loading ? {} : { scale: 0.98 }}
@@ -436,24 +436,20 @@ const Register = () => {
               </div>
             </form>
 
-            <div className="relative my-6">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-700" />
-              </div>
-              <div className="relative flex justify-center">
-                <span className="bg-gray-900 px-3 text-sm text-gray-400">
-                  OR
-                </span>
-              </div>
-            </div>
+              <div className="my-6 flex items-center">
+        <div className="flex-grow border-t border-green-600"></div>
+        <span className="px-3 text-sm text-gray-800">OR</span>
+        <div className="flex-grow border-t border-green-600"></div>
+      </div>
 
+            {/* Google Login */}
             <GoogleLogin onClick={handleGoogleLogin} />
 
-            <p className="mt-6 text-center text-sm text-gray-400">
+            <p className="mt-6 text-center text-sm text-black">
               Already have an account?{" "}
               <Link
                 to="/login"
-                className="text-blue-400 hover:text-blue-300 font-medium"
+                className="text-green-400 hover:text-red-500 font-medium"
               >
                 Login
               </Link>
